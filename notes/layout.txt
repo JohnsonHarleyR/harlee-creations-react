@@ -1,0 +1,34 @@
+Notes for Portfolio Webpage
+
+Name: Harlee's Creations
+
+It will have my software tools and games, a place to buy my stuff, an about me and a blog, and a place to contact me.
+POSSIBLY: Also allow users to sign up so they can play games and use tools without having to start over every time. 
+
+Layout: Every page will have a top navigation bar and reusable buttons and such.
+https://xd.adobe.com/ideas/principles/web-design/11-website-layouts-that-made-content-shine-in-2019/
+
+-Main Page: Z-layout
+-Blog: Single column layout
+-Purchasing: Card grid layout
+-About me: ???
+Sign up: Asymmetrical
+Software tools and games: ??
+Art Portfolio: Boxes?
+
+
+Main Display width: 1920px
+
+The layout will be changeable as a creation feature... The color scheme, at least.
+What should the main names of the root colors be?
+
+--bg-primary-color
+--bg-secondary-color
+--border-color
+--txt-primary-color
+--txt-secondary-color
+--titl-primary-color ??
+--titl-secondary-color ??
+--link-color
+--btn-bg-color
+--btn-txt-color

@@ -1,0 +1,39 @@
+
+:root {
+  --logo-body-width: 448px;
+  --logo-body-height: 386px;
+  --logo-head-width: 607px;
+  --logo-head-height: 227px;
+}
+
+.logo-container {
+  position: relative;
+}
+
+.logo-container.body {
+  width: var(--logo-body-width);
+  height: var(--logo-body-height);
+}
+
+.logo-container.head {
+  width: var(--logo-head-width);
+  height: var(--logo-head-height);
+}
+
+.logo-image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.logo-image.body {
+  width: var(--logo-body-width);
+  height: var(--logo-body-height);
+}
+
+.logo-image.head {
+  width: var(--logo-head-width);
+  height: var(--logo-head-height);
+}
