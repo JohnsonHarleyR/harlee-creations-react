@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import './css/logo.css';
+import '../../../styling/css/logo.css';
 import {LogoScale} from './constants/logo-scales.js';
 
 const LogoBody = ({width, height, textColor, logoColor}) => {

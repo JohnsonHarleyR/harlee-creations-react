@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import './css/logo.css';
+import '../../../styling/css/logo.css';
 import {LogoScale} from './constants/logo-scales.js';
 
 const LogoHead = ({width, height, textColor, logoColor}) => {
@@ -28,7 +28,7 @@ const LogoHead = ({width, height, textColor, logoColor}) => {
     <div className="logo-container head">
       {/* Text image */}
       <svg version="1.0" className='logo-image head text'
-            viewBox="0 0 446.000000 386.000000"
+            viewBox="0 0 607.000000 227.000000"
             preserveAspectRatio="xMidYMid meet">
 
         <g transform="translate(0.000000,227.000000) scale(0.100000,-0.100000)"
@@ -166,7 +166,7 @@ const LogoHead = ({width, height, textColor, logoColor}) => {
 
         {/* Logo image */}
         <svg version="1.0" className='logo-image head icon'
-          viewBox="0 0 446.000000 386.000000"
+          viewBox="0 0 607.000000 227.000000"
           preserveAspectRatio="xMidYMid meet">
 
           <g transform="translate(0.000000,227.000000) scale(0.100000,-0.100000)"
