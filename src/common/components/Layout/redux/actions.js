@@ -1,4 +1,3 @@
-import { Themes } from '../../../constants/themes';
 import TYPES from './types';
 
 const changeTheme = (themeName) => {
@@ -8,6 +7,15 @@ const changeTheme = (themeName) => {
   };
 }
 
+const setHeadLogoValues = (textColor, iconColor) => {
+  return {
+    type: TYPES.SET_HEAD_LOGO_VALUES,
+    textColor: textColor,
+    iconColor: iconColor,
+  };
+}
+
 export default {
   changeTheme,
+  setHeadLogoValues,
 }

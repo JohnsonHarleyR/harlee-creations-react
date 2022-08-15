@@ -1,6 +1,5 @@
 
 
 export const ThemeName = {
-  DEFAULT: 'midnight',
-  MIDNIGHT: 'midnight',
+  DEFAULT: 'default',
 }

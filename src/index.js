@@ -2,7 +2,6 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import './styling/css/layout.css';
-import './styling/css/logo.css';
 import store from './redux';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
