@@ -1,36 +1,33 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
 import './App.css';
-import LogoBody from './common/components/Logo/LogoBody';
-import LogoHead from './common/components/Logo/LogoHead';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import routes from './routes';
 
 function App() {
+
+  const [routeDisplay, setRouteDisplay] = useState(<></>)
+
+  useEffect(() => {
+    let toAdd = [];
+    routes.forEach((r, i) => {
+      toAdd.push(
+        r.exact === true
+          ? <Route key={`route${i}`} exact path={r.path}>{r.component}</Route>
+          : <Route path={r.path}>{r.component}</Route>
+      );
+    });
+    setRouteDisplay(toAdd);
+
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <LogoBody
-        height='200'
-        textColor='blue'
-        logoColor='red'
-      />
-      <LogoHead
-        height='200'
-        textColor='purple'
-        logoColor='red'
-      />
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Switch>
+          {routeDisplay}
+        </Switch>
+      </BrowserRouter>
+    </>
   );
 }
 

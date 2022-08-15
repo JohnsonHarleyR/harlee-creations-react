@@ -1,0 +1,6 @@
+
+const HOME_ALERTS_TYPE = {
+  MAKE_AWESOME: 'MAKE_AWESOME',
+};
+
+export default HOME_ALERTS_TYPE;
