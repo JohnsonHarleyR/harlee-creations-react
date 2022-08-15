@@ -5,6 +5,8 @@ const initialState = {
   themeName: ThemeName.DEFAULT,
   headLogoTextColor: '#000000',
   headLogoIconColor: '#000000',
+  bodyLogoTextColor: '#000000',
+  bodyLogoIconColor: '#000000',
 }
 
 const layoutReducer = (state = initialState, action) => {
@@ -19,6 +21,12 @@ const layoutReducer = (state = initialState, action) => {
         ...state,
         headLogoTextColor: action.textColor,
         headLogoIconColor: action.iconColor,
+      }
+    case TYPES.SET_BODY_LOGO_VALUES:
+      return {
+        ...state,
+        bodyLogoTextColor: action.textColor,
+        bodyLogoIconColor: action.iconColor,
       }
     default:
       return state;

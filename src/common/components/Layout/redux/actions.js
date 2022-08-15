@@ -15,7 +15,16 @@ const setHeadLogoValues = (textColor, iconColor) => {
   };
 }
 
+const setBodyLogoValues = (textColor, iconColor) => {
+  return {
+    type: TYPES.SET_BODY_LOGO_VALUES,
+    textColor: textColor,
+    iconColor: iconColor,
+  };
+}
+
 export default {
   changeTheme,
   setHeadLogoValues,
+  setBodyLogoValues,
 }

@@ -1,6 +1,9 @@
 import { useEffect } from "react";
 import { connect } from "react-redux";
-import { setHeadLogoColors } from "./redux/thunks";
+import {
+  setHeadLogoColors,
+  setBodyLogoColors,
+} from "./redux/thunks";
 import { Themes } from "../../constants/themes";
 import LogoHead from '../Logo/LogoHead';
 
@@ -10,12 +13,14 @@ const Layout = ({
   headLogoTextColor,
   headLogoIconColor,
   setHeadLogoColors,
+  setBodyLogoColors,
 }) => {
 
   useEffect(() => {
     if (themeName) {
       let theme = Themes[themeName];
       setHeadLogoColors(theme.headLogoTextColor, theme.headLogoIconColor);
+      setBodyLogoColors(theme.bodyLogoTextColor, theme.bodyLogoIconColor);
       let props = theme.props;
       props.forEach(p => {
         console.log(`changing prop: `, p.property);
@@ -48,12 +53,12 @@ const mapStateToProps = ({layout}) => {
     themeName: layout.themeName,
     headLogoTextColor: layout.headLogoTextColor,
     headLogoIconColor: layout.headLogoIconColor,
-    setHeadLogoValues: layout.setHeadLogoValues,
   };
 };
 
 const mapDispatchToProps = {
   setHeadLogoColors,
+  setBodyLogoColors,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Layout);

@@ -5,6 +5,8 @@ export const Themes = {
   default: {
     headLogoTextColor: '#FFFEF6',
     headLogoIconColor: '#BAFFE2',
+    bodyLogoTextColor: '#FFFEF6',
+    bodyLogoIconColor: '#BAFFE2',
     props: 
     [
       {
@@ -34,6 +36,14 @@ export const Themes = {
       {
         property: '--logo-head-txt-color',
         value: 'white',
+      },
+      {
+        property: '--txt-body-color',
+        value: '#fff',
+      },
+      {
+        property: '--txt-header-color',
+        value: '#fff',
       },
       {
         property: '--link-color',

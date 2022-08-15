@@ -3,7 +3,8 @@
 export const LogoScale = {
   body: {
     getWidth: (height) => {
-      return 448 * height / 386;
+      let result = 448 * height / 386;
+      return result;
     },
     getHeight: (width) => {
       return 386 * width / 448;

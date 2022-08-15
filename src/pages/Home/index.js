@@ -1,29 +1,36 @@
-import { HomeThunks } from "./redux";
-import { useDispatch } from "react-redux";
+import { connect } from "react-redux";
 import LogoBody from "../../common/components/Logo/LogoBody";
 
-const Home = () => {
-
-  const dispatch = useDispatch();
-
-  const handleMakeAwesome = () => {
-    dispatch(HomeThunks.helpMakeAwesome());
-  }
+const Home = ({
+  logoTextColor,
+  logoIconColor,
+}) => {
 
   //console.log('home component');
 
   return (
     <div className='section'>
-      Here is the home page, whoo!
-      <br></br>
-      <button onClick={handleMakeAwesome}>Make Awesome</button>
       <LogoBody
-        height='200'
-        textColor='white'
-        logoColor='red'
+        height={200}
+        textColor={logoTextColor}
+        logoColor={logoIconColor}
       />
+      <span>
+      Here is the <b>home <i>page</i></b>, <i>whoo!</i>
+      </span>
+
     </div>
   );
 }
 
-export default Home;
+const mapStateToProps = ({home, layout}) => {
+  return {
+    logoTextColor: layout.bodyLogoTextColor,
+    logoIconColor: layout.bodyLogoIconColor,
+  };
+};
+
+const mapDispatchToProps = {
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

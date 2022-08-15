@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 //import '../../../styling/css/logo.css';
 import {LogoScale} from './constants/logo-scales.js';
 
-const LogoBody = ({width, height, textColor, logoColor}) => {
+const LogoBody = ({textColor, logoColor, width, height}) => {
 
   useEffect(() => {
     let style = document.documentElement.style;
@@ -21,18 +21,19 @@ const LogoBody = ({width, height, textColor, logoColor}) => {
     if (textColor) {
       style.setProperty('--logo-body-text-color', textColor);
     }
+
+
   }, []);
 
-
   return (
-    <div className="logo-container body text">
+    <div className="logo-container body">
       {/* Text image */}
       <svg  className="logo-image body" version="1.0"
             viewBox="0 0 446.000000 386.000000"
             preserveAspectRatio="xMidYMid meet">
-
+            
           <g transform="translate(0.000000,386.000000) scale(0.100000,-0.100000)"
-          fill={textColor} stroke="none">
+          className="logo-body-g text" fill={textColor} stroke="none">
           <path d="M2282 3480 c-45 -27 -89 -124 -109 -237 -12 -67 -14 -129 -10 -260
           l6 -171 -34 -48 c-48 -68 -87 -96 -127 -92 -30 3 -33 6 -36 41 -7 82 40 237
           84 282 16 16 15 18 -13 47 -38 37 -94 46 -157 25 l-46 -16 0 27 c0 15 12 45
@@ -222,7 +223,7 @@ const LogoBody = ({width, height, textColor, logoColor}) => {
           preserveAspectRatio="xMidYMid meet">
 
           <g transform="translate(0.000000,386.000000) scale(0.100000,-0.100000)"
-          fill={logoColor} stroke="none">
+          className="logo-head-g icon" fill={logoColor} stroke="none">
           <path d="M2362 1228 c-7 -7 -12 -24 -12 -38 0 -33 17 -50 50 -50 29 0 60 27
           60 52 0 37 -70 64 -98 36z"/>
           <path d="M1884 1132 c-55 -31 -112 -65 -127 -75 l-27 -17 0 -145 0 -145 33
