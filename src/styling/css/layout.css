@@ -1,14 +1,44 @@
 :root {
   --bg-primary-color: #000000;
-  --bg-secondary-color: #000000;
+  --bg-secondary-color: green;
+  --bg-header-color: navy;
   --border-color: #000000;
-  --txt-primary-color: #000000;
-  --txt-secondary-color: #000000;
+  --txt-body-color: #000000;
+  --txt-header-color: white;
   --titl-primary-color: #000000;
   --titl-secondary-color: #000000;
   --link-color: #000000;
   --btn-bg-color: #000000;
   --btn-txt-color: #000000;
+  --header-height: 150px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-primary-color);
+  width: 100%;
+  height: 100%;
+}
+body header {
+  height: var(--header-height);
+  background-color: var(--bg-header-color);
+  position: sticky;
+  width: 100%;
+}
+body .content {
+  background-color: var(--bg-secondary-color);
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  margin-top: 0;
+  color: var(--txt-body-color);
 }
 
 /*# sourceMappingURL=layout.css.map */

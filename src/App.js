@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import routes from './routes';
+import Layout from './common/components/Layout';
 
 function App() {
 
@@ -12,7 +13,7 @@ function App() {
     routes.forEach((r, i) => {
       toAdd.push(
         r.exact === true
-          ? <Route key={`route${i}`} exact path={r.path}>{r.component}</Route>
+          ? <Route key={`route${i}`} exact path={r.path}><Layout>{r.component}</Layout></Route>
           : <Route path={r.path}>{r.component}</Route>
       );
     });
