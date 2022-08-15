@@ -6,6 +6,7 @@ import {
 } from "./redux/thunks";
 import { Themes } from "../../constants/themes";
 import LogoHead from '../Logo/LogoHead';
+import Menu from "../menu/desktop/Menu";
 
 const Layout = ({
   children,
@@ -38,6 +39,7 @@ const Layout = ({
             iconColor={headLogoIconColor}
           />
         </div>
+        <Menu />
       </nav>
       <div className="content">
         {children}

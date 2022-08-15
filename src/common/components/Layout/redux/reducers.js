@@ -1,5 +1,6 @@
 import TYPES from './types';
 import { ThemeName } from '../../../constants/enums';
+import { MenuLinks } from '../../../constants/menu-items';
 
 const initialState = {
   themeName: ThemeName.DEFAULT,
@@ -7,6 +8,8 @@ const initialState = {
   headLogoIconColor: '#000000',
   bodyLogoTextColor: '#000000',
   bodyLogoIconColor: '#000000',
+
+  menuItems: MenuLinks,
 }
 
 const layoutReducer = (state = initialState, action) => {
