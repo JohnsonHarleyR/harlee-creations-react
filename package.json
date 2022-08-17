@@ -1,5 +1,5 @@
 {
-  "name": "use-form-practice-redux2",
+  "name": "harlee-creations-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,6 +10,7 @@
     "express": "^4.18.1",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
+    "react-device-detect": "^2.2.2",
     "react-dom": "^18.2.0",
     "react-hook-form": "^6.14.0",
     "react-redux": "^8.0.2",

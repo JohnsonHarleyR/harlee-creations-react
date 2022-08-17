@@ -11,7 +11,7 @@ export const MenuLinks = [
         sub: [
           {
             text: 'Bracelet Designer',
-            link: './',
+            link: './bracelet-designer',
           },
         ],
       }

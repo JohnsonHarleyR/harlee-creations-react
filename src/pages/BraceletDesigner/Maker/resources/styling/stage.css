@@ -1,0 +1,118 @@
+:root {
+  --btn-bg-color: #ffffff;
+  --btn-disabled-bg-color: grey;
+  --btn-border-color: black;
+  --btn-text-color: black;
+  --btn-font-family: monospace;
+
+  --setup-item-height: 30px;
+}
+
+/* canvas {
+  position: relative;
+} */
+
+.stage {
+  display: flex;
+  flex-direction: column;
+}
+
+.canvas-area {
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* align-items: normal; */
+  /* align-items: center; */
+}
+
+.pattern-canvas {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.add-remove-buttons {
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.bottom-btns-div {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.btn {
+  align-self: center;
+  cursor: pointer;
+  border: 2px solid var(--btn-border-color);
+  box-sizing: border-box;
+  border-radius: 7%;
+  background-color: var(--btn-bg-color);
+  color: var(--btn-text-color);
+  display: flex;
+  font-weight: bold;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--btn-font-family);
+}
+
+.btn:disabled {
+  background-color: var(--btn-disabled-bg-color);
+  cursor:auto;
+}
+
+.get-image {
+  margin-top: 5px;
+  width: 125px;
+  height: 40px;
+  font-size: large;
+}
+
+.setup-item {
+  height: var(--setup-item-height);
+}
+
+.add,.change {
+  width: 70px;
+}
+
+.remove {
+  width: 140px;
+}
+
+.complete {
+  width: 250px;
+  font-size: x-large;
+  height: 40px;
+
+}
+
+.circle-button {
+  margin-top: 0px;
+  margin-left: 3px;
+  margin-right: 3px;
+  cursor: pointer;
+  border: 2px solid var(--btn-border-color);
+  box-sizing: border-box;
+  background-color: var(--btn-bg-color);
+  color: var(--btn-text-color);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  padding-bottom: 3px;
+  font-weight: 500;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+  font-family: var(--btn-font-family);
+}
+
+.does-align-message {
+  margin-top: 10px;
+  font-size: medium;
+  justify-content: center;
+}

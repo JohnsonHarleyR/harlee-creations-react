@@ -1,0 +1,15 @@
+.instruction-div {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  
+}
+
+.instruction-link {
+  color:aqua;
+}
+
+.instruction-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
