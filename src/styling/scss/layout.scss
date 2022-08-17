@@ -18,7 +18,9 @@
   --link-color: #000000;
   --btn-bg-color: #000000;
   --btn-txt-color: #000000;
-
+  --sub-menu-border-color: #2B2F77;
+  --sub-menu-bg-color: #6B49B4;
+  --sub-menu-hover-color: #855988;
 
   --header-height: 15vh;
   
@@ -27,6 +29,9 @@
   --logo-head-left-margin: 4vw;
   --logo-body-width: 448px;
   --logo-body-height: 386px;
+
+  --sub-menu-width: 200px;
+  --sub-menu-item-height: 30px;
 }
 
 html, body {
@@ -104,14 +109,20 @@ body {
         align-items: center;
         list-style-type: none;
         color: var(--txt-header-color);
+
+        .menu-link {
+          position: relative;
           a {
             text-decoration: inherit;
             color: inherit;
-
-            &.menu-link {
-              width: 5vw;
-            }
           }
+
+          &:hover {
+            font-weight: bold;
+          }
+        }
+        
+
         visibility: visible;
       }
 
@@ -129,6 +140,50 @@ body {
           visibility: visible;
         }
       }
+    }
+
+    .sub-menu {
+      position: absolute;
+      width: var(--sub-menu-width);
+      padding-left: 0;
+      border: 1px solid var(--sub-menu-border-color);
+
+      &.sub-sub {
+        left: calc(-1 * var(--sub-menu-width) - 2px);
+        top: 0;
+      }
+
+      &.hide {
+        visibility: hidden;
+      }
+
+      ul {
+        list-style: none;
+        list-style-type: none;
+        margin-left: 0;
+        padding-left: 0;
+        box-sizing: content-box;
+
+        .sub-menu-link {
+          position: relative;
+          font-weight: 100;
+          border: 1px solid var(--sub-menu-border-color);
+          height: var(--sub-menu-item-height);
+          background-color: var(--sub-menu-bg-color);
+  
+          a {
+            text-decoration: inherit;
+            color: inherit;
+          }
+  
+          &:hover {
+            font-weight: bold;
+            background-color: var(--sub-menu-hover-color);
+          }
+        }
+      }
+
+      
     }
 
 

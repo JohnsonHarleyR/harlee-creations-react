@@ -49,6 +49,18 @@ export const Themes = {
         property: '--link-color',
         value: '#BAFFE2',
       },
+      {
+        property: '--sub-menu-border-color',
+        value: '#141852',
+      },
+      {
+        property: '--sub-menu-bg-color',
+        value: '#855988',
+      },
+      {
+        property: '--sub-menu-hover-color',
+        value: '#483475',
+      },
     ],
   },
 

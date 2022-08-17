@@ -1,30 +1,18 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import SubMenu from "../SubMenu";
 
+const SubMenuItem = ({data, subMenuData}) => {
 
-const MenuItem = ({data, isFirstItem, isLastItem}) => {
-
-  const [subMenuData, setSubMenuData] = useState(null);
   const [showSubMenu, setShowSubMenu] = useState(false);
-
-  useEffect(() => {
-    if (data) {
-      if (data.sub !== null) {
-        setSubMenuData(data.sub);
-      }
-    }
-  }, [data]);
-
-
-
+  
   const changeShowSubMenu = (doShow) => {
     //console.log(`show: ${doShow}`);
     setShowSubMenu(doShow);
   }
 
   return (
-    <li
-      className="menu-link desktop"
+    <li 
+      className="sub-menu-link"
       onMouseOver={() => {changeShowSubMenu(true)}}
       onMouseLeave={() => {changeShowSubMenu(false)}}
     >
@@ -38,14 +26,14 @@ const MenuItem = ({data, isFirstItem, isLastItem}) => {
         <SubMenu
           showMenu={showSubMenu}
           data={subMenuData}
-          isFirstMenu={isFirstItem}
-          isLastMenu={isLastItem}
+          isFirstMenu={false}
+          isLastMenu={true}
+          isSubOfSub={true}
         />
         : <></>
       }
-      
     </li>
   );
-}
+};
 
-export default MenuItem;
+export default SubMenuItem;

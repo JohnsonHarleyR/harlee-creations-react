@@ -10,11 +10,15 @@ const Menu = ({
 
   useEffect(() => {
     let items = [];
-    data.forEach(d => {
+    data.forEach((d, i) => {
+      let isLastItem = i === data.length - 1;
+      let isFirstItem = i === 0;
       items.push(
         <MenuItem
           key={d.text}
           data={d}
+          isFirstItem={isFirstItem}
+          isLastItem={isLastItem}
         />
       );
     });
