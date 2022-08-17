@@ -34,16 +34,8 @@ const SubMenu = ({showMenu, data, isFirstMenu, isLastMenu, isSubOfSub = false}) 
   }, [data]);
 
   useEffect(() => {
-    if (isFirstMenu) {
-      menuRef.current.style.left = '0';
-    } else if (isLastMenu) {
-      menuRef.current.style.right = '0';
-    } else {
-      menuRef.current.style.left = '50%';
-      menuRef.current.style.right = '50%';
-      menuRef.current.style.transform = 'translate(-50%, 0)';
-    }
-  }, [isLastMenu]);
+    menuRef.current.style.right = '-1vw';
+  }, []);
 
   return(
     <div className={className} ref={menuRef}>

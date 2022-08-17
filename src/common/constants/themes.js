@@ -55,11 +55,11 @@ export const Themes = {
       },
       {
         property: '--sub-menu-bg-color',
-        value: '#855988',
+        value: '#6B4984',
       },
       {
         property: '--sub-menu-hover-color',
-        value: '#483475',
+        value: '#2B2F77',
       },
     ],
   },

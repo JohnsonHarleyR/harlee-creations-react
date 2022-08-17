@@ -22,7 +22,7 @@
   --header-height: 15vh;
   --logo-head-height: var(--header-height);
   --logo-head-width: calc(607 * var(--logo-head-height) / 227 - 5vh);
-  --logo-head-left-margin: 4vw;
+  --logo-head-left-margin: 5vw;
   --logo-body-width: 448px;
   --logo-body-height: 386px;
   --sub-menu-width: 200px;
@@ -100,9 +100,13 @@ body nav .menu.desktop .menu-link {
 body nav .menu.desktop .menu-link a {
   text-decoration: inherit;
   color: inherit;
+  font-size: x-large;
 }
 body nav .menu.desktop .menu-link:hover {
   font-weight: bold;
+}
+body nav .menu.desktop .sub-menu-link a {
+  font-size: large;
 }
 body nav .menu.mobile {
   color: var(--txt-header-color);
@@ -119,11 +123,10 @@ body nav .menu.mobile {
 body nav .sub-menu {
   position: absolute;
   width: var(--sub-menu-width);
-  padding-left: 0;
-  border: 1px solid var(--sub-menu-border-color);
+  border: 2px solid var(--sub-menu-border-color);
 }
 body nav .sub-menu.sub-sub {
-  left: calc(-1 * var(--sub-menu-width) - 2px);
+  left: calc(-1 * var(--sub-menu-width) - 5px);
   top: 0;
 }
 body nav .sub-menu.hide {
@@ -146,6 +149,7 @@ body nav .sub-menu ul .sub-menu-link {
 body nav .sub-menu ul .sub-menu-link a {
   text-decoration: inherit;
   color: inherit;
+  padding-left: 1vw;
 }
 body nav .sub-menu ul .sub-menu-link:hover {
   font-weight: bold;

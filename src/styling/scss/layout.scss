@@ -26,7 +26,7 @@
   
   --logo-head-height: var(--header-height);
   --logo-head-width: calc(607 * var(--logo-head-height) / 227 - 5vh);
-  --logo-head-left-margin: 4vw;
+  --logo-head-left-margin: 5vw;
   --logo-body-width: 448px;
   --logo-body-height: 386px;
 
@@ -115,11 +115,16 @@ body {
           a {
             text-decoration: inherit;
             color: inherit;
+            font-size: x-large;
           }
 
           &:hover {
             font-weight: bold;
           }
+        }
+
+        .sub-menu-link a {
+          font-size: large;
         }
         
 
@@ -145,11 +150,11 @@ body {
     .sub-menu {
       position: absolute;
       width: var(--sub-menu-width);
-      padding-left: 0;
-      border: 1px solid var(--sub-menu-border-color);
+      border: 2px solid var(--sub-menu-border-color);
+
 
       &.sub-sub {
-        left: calc(-1 * var(--sub-menu-width) - 2px);
+        left: calc(-1 * var(--sub-menu-width) - 5px);
         top: 0;
       }
 
@@ -164,16 +169,18 @@ body {
         padding-left: 0;
         box-sizing: content-box;
 
+
         .sub-menu-link {
           position: relative;
           font-weight: 100;
           border: 1px solid var(--sub-menu-border-color);
           height: var(--sub-menu-item-height);
           background-color: var(--sub-menu-bg-color);
-  
+
           a {
             text-decoration: inherit;
             color: inherit;
+            padding-left: 1vw;
           }
   
           &:hover {
